@@ -1,0 +1,30 @@
+import java.util.*;
+import java.io.*;
+class Main
+{
+     public static void main(String[] args)
+     {
+         Scanner sc=new Scanner(System.in);
+         int n=sc.nextInt();
+         int ar[][]=new int[n][n];
+         for(int i=0;i<n;i++)
+         {
+             for(int j=0;j<n;j++)
+             {
+                 ar[i][j]=sc.nextInt();
+             }
+         }
+         int ld=0,rd=0;
+         int s=0;int t=n-1;
+         for(int k=0;k<n;k++)
+         {
+             ld+=ar[k][k];
+             rd+=ar[s][t];
+             s++;
+             t--;
+         }
+         int diff=Math.abs((ld-rd));
+         System.out.println(diff);
+
+     }
+}

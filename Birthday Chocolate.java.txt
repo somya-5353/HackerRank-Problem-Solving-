@@ -1,0 +1,34 @@
+import java.util.*;
+import java.io.*;
+class Solution
+{
+    public static int birthday(int[] a,int d,int m)
+    {
+        int count=0;
+        for(int i=0;i<=a.length-m;i++)
+        {
+            int sum=0;
+            int k=i;
+            for(int j=1;j<=m;j++)
+            {
+                sum+=a[k];
+                k++;
+            }
+            if(sum==d)
+              count++;
+        }
+        return count;
+    }
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int s[]=new int[n];
+        for(int i=0;i<n;i++)
+           s[i]=sc.nextInt();
+        int d=sc.nextInt();
+        int m=sc.nextInt();
+        int result=birthday(s,d,m);
+        System.out.println(result);   
+    }
+}

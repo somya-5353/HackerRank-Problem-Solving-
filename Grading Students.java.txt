@@ -1,0 +1,25 @@
+import java.util.*;
+import java.io.*;
+class Grades
+{
+    public static void main(String[] arg)
+    {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int grades[]=new int[n];
+        int i,qu,rounded_grades;
+        for(i=0;i<n;i++)
+           grades[i]=sc.nextInt();
+        for(i=0;i<n;i++)
+        {
+            qu=grades[i]/5;
+            rounded_grades=(qu+1)*5;
+            if(rounded_grades<40)
+             System.out.println(grades[i]);
+            else if((rounded_grades-grades[i])<3)
+              System.out.println(rounded_grades);
+            else
+              System.out.println(grades[i]);
+        }
+    }
+}         

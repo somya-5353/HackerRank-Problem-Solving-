@@ -1,0 +1,30 @@
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+public class Solution
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int k=sc.nextInt();
+        int i,sum=0;
+        int arr[]=new int[n];
+        for(i=0;i<n;i++)
+        {
+            arr[i]=sc.nextInt();
+            sum+=arr[i];
+        }
+        int b=sc.nextInt();
+        sum=sum-arr[k];
+        int res=sum/2;
+        if(res==b)
+          System.out.println("Bon Appetit");
+        else 
+          System.out.println(b-res);  
+
+    }
+}
